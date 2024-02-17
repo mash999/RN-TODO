@@ -28,7 +28,7 @@ jest.mock('@react-native-async-storage/async-storage', () => ({
 jest.spyOn(Date, 'now').mockImplementation(() => 1708138166315);
 
 
-describe('AddItem', () => {
+describe('Test AddItem Component', () => {
     const dispatchMock = jest.fn();
     const navigateMock = jest.fn();
     (useDispatch as unknown as jest.Mock).mockReturnValue(dispatchMock);
