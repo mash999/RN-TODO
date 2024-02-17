@@ -28,7 +28,6 @@ const Home = () => {
         try {
             const storedData = await AsyncStorage.getItem(asyncStorageKeys.todoList);
             if (storedData !== null) {
-                console.log("Data in async storage: ", storedData);
                 const sortedData = JSON.parse(storedData).reverse() 
                 dispatch(setStore(sortedData));
             }
@@ -44,21 +43,29 @@ const Home = () => {
         });
     };
 
+
+    const todoListContent = todoList?.length > 0 ? (
+        <>
+            <Text style={styles.header}>Your Tasks</Text>
+            <Text style={styles.date}>Today is {formatTime(Date.now())}</Text> 
+            {todoList.map((task: TodoListTask, index: number) => 
+                <ListItem
+                    key={index} 
+                    task={task} 
+                    onPress={navigateAway}
+                />
+            )}
+        </>
+    ) : null;
+    
+
     
     return (
         <Layout>
-            <Text style={styles.header}>Your Tasks</Text>
-            <Text style={styles.date}>Today is {formatTime(Date.now())}</Text>
-
-            { todoList?.length > 0
-                ? todoList.map((task: TodoListTask, index: number) => 
-                    <ListItem
-                        key={index} 
-                        task={task} 
-                        onPress={navigateAway}
-                    />
-                )
-                : <EmptyHome />
+            { 
+                todoListContent 
+                    ? todoListContent 
+                    : <EmptyHome />
             }
         </Layout> 
     )

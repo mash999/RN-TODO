@@ -27,6 +27,7 @@ export interface ButtonComponentProps {
     onPress: () => void;
     btnStyle?: Object;
     btnTextStyle?: Object;
+    testID?: string;
 }
 
 
