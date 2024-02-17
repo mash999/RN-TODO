@@ -20,5 +20,4 @@ The easiest option is to download the `Expo Go` app from the playstore/apple sto
 The app has a login screen. Since it does not have an actual user, the app uses a hardcoded value for username and password. To pass the login screen, use the following credentials:
 
 Username: admin
-
 Password: test123
