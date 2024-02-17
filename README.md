@@ -7,7 +7,7 @@ A simple TODO list app that allows users to add items to their TODO list as well
 Please use the latest stable version of node js for this project. If you have `nvm` installed, run `nvm use 20.11.1`. In case you don't have it installed, please refer to this article on how to install `nvm`:
 https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
 
-1. Clone the codebase to your local computer.
+1. Clone this Github repository to your local computer.
 2. Install `Expo` by running `npm install -g expo`
 3. Install `Expo CLI` globally by running `npm install -g expo-cli`
 4. Navigate to the app repository and run `npm install` to download all dependencies
