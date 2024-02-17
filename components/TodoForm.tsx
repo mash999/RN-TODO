@@ -62,6 +62,7 @@ const TodoForm = (props: {onSubmit: (formData: TodoListTask) => void, task?: Tod
                     <Input 
                         placeholder="Please enter a title ..." 
                         value={formData.title} 
+                        testID='title-input'
                         onChangeText={updateTitle}
                     />
                 </Card>
@@ -73,7 +74,8 @@ const TodoForm = (props: {onSubmit: (formData: TodoListTask) => void, task?: Tod
                         multiline={true}
                         textAlignVertical="top"
                         value={formData.description} 
-                        style={styles.textBox}    
+                        style={styles.textBox}
+                        testID='description-input'
                         onChangeText={updateDescription}
                     />
                 </Card>
@@ -98,6 +100,7 @@ const TodoForm = (props: {onSubmit: (formData: TodoListTask) => void, task?: Tod
                 <Button 
                     onPress={submitFormData} 
                     btnStyle={styles.btn}
+                    testID="add-todo-btn"
                     title={ props.task ? 'Update' : 'Save' }
                 />
 

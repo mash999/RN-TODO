@@ -6,7 +6,11 @@ import { ButtonComponentProps } from '../types';
 
 const Button = (props: ButtonComponentProps) => {
     return (
-        <TouchableOpacity style={{...styles.btn, ...props.btnStyle}} onPress={props.onPress}>
+        <TouchableOpacity 
+            {...props}
+            style={{...styles.btn, ...props.btnStyle}} 
+            onPress={props.onPress}
+        >
             <Text style={{...styles.btnText, ...props.btnTextStyle}}>{props.title}</Text>
         </TouchableOpacity>
     );
